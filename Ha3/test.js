@@ -5,7 +5,7 @@ function min(z1,z2){
 
 
 function mod2(z){
-	if(!isNaN(z)&&z<0)z=z*-1
+	if(z<0)z=z*-1
 
 	return isNaN(z)?NaN:
 	z==0 ? true : z==1 ? false : mod2(z-2)
@@ -36,4 +36,4 @@ function countChar(s,c){
 	return x
 }
 
-console.log(mod2("-2"))
+console.log(countChar(103,1))

@@ -5,15 +5,14 @@ function min(z1,z2){
 function isEven(z1){
 	if(isNaN(z1)) return false 
 		else{
+			if(z1<0){z1=z1*-1}
+			else
 			if(z1==0) return true
 				if(z1==1) return false
 					if(z1>1) return isEven(z1-2)
 				}
 		}
 
-function rec(z){
-	if (z==0) {return 0} else {return z+rec(z-1)}
-		}
 
 
 function countLetter(s,c){
@@ -28,4 +27,4 @@ function countLetter(s,c){
 		}
 	}
 
-console.log(countLetter(100,""))
+console.log(isEven(-1))
