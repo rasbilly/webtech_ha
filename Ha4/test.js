@@ -46,4 +46,4 @@ function test(){
 	}
 }
 
-test()node
+test()

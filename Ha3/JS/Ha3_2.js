@@ -28,12 +28,18 @@ function countBs(s){
 
 function countChar(s,c){
 	var x=0
-	s=String(s)
-	c=String(c)
+	s=String(s).toUpperCase()
+	c=String(c).toUpperCase()
 	for(var i=0;i<s.length;i++){
 		if(s.charAt(i)==c) x++	
 	}
 	return x
 }
 
-console.log(mod2("-2"))
+console.log(mod2("test"))
+
+
+
+//annonyme Funktionen
+//protoTypen 
+// funktionsliterale
