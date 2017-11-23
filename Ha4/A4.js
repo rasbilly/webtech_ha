@@ -1,4 +1,6 @@
 
+
+
 function sum(array){
 	var x=0
 	for(var i=0;i<array.length;i++){
@@ -16,6 +18,16 @@ function reverseArray(array){
 	for(var i=array.length-1;i>=0;i=i-1){
 		revArray.push(array[i])
 	}return revArray
+}
+
+function reverseArray2(array){
+	if(array.length==0)return []
+	var x
+	for(var i=0;i<Math.floor(array.length/2);i++){
+		x=array[i]
+		array[i]=array[array.length-1-i]
+		array[array.length-1-i]=x
+	}return array
 }
 
 
@@ -97,3 +109,4 @@ return true
 }
 
 //http://eloquentjavascript.net/04_data.html
+console.log(reverseArray2([1,2,3,4,5,6,7,8,9]))
