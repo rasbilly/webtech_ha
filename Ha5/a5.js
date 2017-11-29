@@ -4,12 +4,12 @@ function Vector(x,y){
 }
 
 Vector.prototype.plus=function(other){
-	return (Object.getPrototypeOf(other)==Vector)? false : new Vector(this.x+other.x,this.y+other.y)
+	return (Object.getPrototypeOf(other)!=Vector.prototype)? false : new Vector(this.x+other.x,this.y+other.y)
 }
 	
 
 Vector.prototype.minus=function(other){
-	return (Object.getPrototypeOf(other)==Vector)? false : new Vector(this.x-other.x,this.y-other.y)
+	return (Object.getPrototypeOf(other)!=Vector.prototype)? false : new Vector(this.x-other.x,this.y-other.y)
 }
 	
 Object.defineProperty(Vector.prototype, "length",{
