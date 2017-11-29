@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "myFont";
+  src: url("dc_s.ttf");
+}
+
+
+
+#rot{
+	color: red;
+}
+#gruen{
+	color: green;
+}
+#blau{
+	color: blue;
+}
+
+table ,th ,td{
+    border: 1px  solid black;
+}
+
+th,td{
+	 width: 500px;
+}
+
+#s1{
+	font-family: Arial,sans-serif;  
+
+}
+#s2{
+	font-family: "Times New Roman", cursive;
+}
+#s3{
+	font-family: myFont,Arial, monospace;
+
+}
+/*
+body{
+	font-size: 20px
+}
+*/
+#size1{
+	font-size: 32px	;
+}
+#size2{
+	font-size: 1.5em;
+}
+#size3{
+	font-size: 1.5rem;
+}
+
+#style1{
+font-style: oblique;
+}
+#style2{
+font-style: italic;
+}
+
+#fw1{
+	font-weight: bolder;
+}
+
+#fw2{
+	font-weight: 900;
+}
+
+
+#tt1{
+	text-transform: lowercase;
+}
+
+#tt2{
+text-transform: uppercase;
+}
+
+
+#td1{
+	text-decoration:underline; 
+}
+
+#td2{
+text-decoration: overline;
+}
+
+#td3{
+	text-decoration: line-through;
+
+}
+#ts1{
+	text-shadow: 2px 2px 2px blue, 
+               10px 10px 10px yellow,
+               -5px -5px 5px red;
+}
+
+
+
+#ta1{
+	text-align: center;
+}
+
+#lh{
+	line-height: 50%;
+}
+
+#ls{
+	letter-spacing:10px;
+}
+#ws{
+	word-spacing:10px;
+}

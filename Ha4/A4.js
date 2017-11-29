@@ -9,6 +9,14 @@ function sum(array){
 	return x
 }
 
+function range(s,e, skipper=1){
+	if(isNaN(s)||isNaN(e))return []
+	var array=[]
+	for(var i=s;i<=e;i=i+skipper){
+		array.push(i)
+	}return array
+}
+
 //console.log(sum(range(1,100)))
 
 
@@ -109,4 +117,4 @@ return true
 }
 
 //http://eloquentjavascript.net/04_data.html
-console.log(reverseArray2([1,2,3,4,5,6,7,8,9]))
+//console.log(reverseArray2([1,2,3,4,5,6,7,8,9]))
