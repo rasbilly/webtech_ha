@@ -1,0 +1,129 @@
+<!--
+
+1.)
+Absolute Positionierung
+• Element wird aus dem normalen Elementfluss herausgelöst
+• Position des Elements orientiert sich am Rand des
+nächsthöheren Elternelements, welches ebenfalls mittels
+Positionierung aus dem Elementfluss herausgelöst wurde
+• Wenn der Anwender im Inhalt scrollt, scrollen absolut
+positionierte Elemente mit
+
+-> nächsthöheres Element darf kein absolute sein
+
+
+
+2.)
+
+ö
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	header{
+		height:5em; 
+		border: 2px dashed black;
+	}
+
+	div{
+		position: relative;
+		border: 2px dashed orange;
+	}
+
+	nav{
+		position: absolute;
+		left:0;
+		max-width:150px;
+		border: 2px dashed black;
+	}
+	article{
+		position: relative;
+		left: 150px;
+		width:20em;
+		border: 2px dashed blue;
+	}
+	h2{
+		border: 2px dashed black;
+	}
+
+	#p1{
+		text-align:justify;
+		padding: 1em; 
+		height:15em; 
+		width:50%; 
+		border: 2px dashed green;
+	}
+
+	#p2{
+		border: 2px dashed black;
+	}
+
+	aside{
+		right: 0;
+		position: fixed;
+		border: 2px dashed green;
+	}
+
+
+	footer{
+		position: relative;
+		
+		text-align:center; 
+		height:3em; 
+		border: 2px dashed black;
+		width: 
+	}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>Welcome to WebTech</h1>
+	</header>
+	<div>
+		<nav>
+			<ul>
+				<li>Startseite</li>
+				<li>Impressum</li>
+				<li>Kontakt</li>
+			</ul>
+		</nav>
+		<aside>
+			<img src="werb1.jpg" alt="Werbung" width="100px" height="300px" style="display: inline-block;">
+			<br>
+			<a href="#top">Zum Anfang</a>
+		</aside>
+		<article >
+			<h2>Überschrift</h2>
+			<p id="p1">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+				nonumy eirmod tempor invidunt ut
+			</p>
+			<p id="p2">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+				nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+				sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+				rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+				ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+				elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+				dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+				est Lorem ipsum dolor sit amet.
+			</p>
+		</article>
+
+	</div>
+	<footer>
+		<ul>
+			<li style="display:inline;">Startseite</li>
+			<li style="display:inline;">Impressum</li>
+			<li style="display:inline;">Kontakt</li>
+		</ul>
+	</footer>
+</body>
+</html>

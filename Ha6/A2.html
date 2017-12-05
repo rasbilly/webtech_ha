@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A6.2</title>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			counter-reset: h1counter;
+		}
+
+		h1{
+			counter-reset: h2counter;
+
+		}
+		
+		h1:before{
+			counter-increment: h1counter;
+			content: counter(h1counter)" ";
+			
+		}
+		h2:before{
+			counter-increment: h2counter;
+			content:counter(h1counter)"."counter(h2counter)" ";
+			
+			 
+		}
+
+
+	</style>
+
+	<h1>A</h1>
+	<h2>AA</h2>
+	<h2>AB</h2>
+	<h1>B</h1>
+	<h2>BA</h2>
+	<h2>BB</h2>
+	<h1>C</h1>
+	<h2>CA</h2>
+	<h2>CB</h2>
+</body>
+</html>

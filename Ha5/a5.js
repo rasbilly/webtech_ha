@@ -35,6 +35,9 @@ get:function(){return this.array[this.pos-1]}})
 
 
 
+
+
+
 function RangeSeq(start, end){
   if(start-end<0){this.add=1} 
   else if(start-end>0){this.add=-1} 
@@ -50,6 +53,8 @@ RangeSeq.prototype.hasNext=function(){
   }else{
   	return false;
   }
+
+  
   
       
 }

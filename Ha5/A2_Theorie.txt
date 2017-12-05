@@ -1,0 +1,67 @@
+Was sind die drei häufigsten Typen von Boxen? Wie unterscheiden sich diese drei Typen?
+Zu welchem Typ gehören <a>, <article>, <div>, <h1>, <img>, <p>, <span>
+und <strong>? Mit welcher CSS-Eigenschaft kann man den Box-Typ eines HTMLElements
+ändern?
+
+Arten: inline, block, inline-block
+
+inline: 
+- Elemente erzeugen eine oder mehrere inline-boxen
+- in mehreren Teile zerlegbar -> wenn Zeilenumbruch / zu wenig platz
+- Breite durch Inhalt bestimmt
+- Höhe in der Regel durch Schriftart / line-height
+
+block:
+- gesamte Breite des Elternelemntes (default)
+- mehrere Block-Boxen untereinander angeordnet
+- Höhe kann 0 sein (default = Höhe Inhalt)
+
+inline-block: 
+- verläuft in einer Zeile -> nicht teilbar auf mehrere Zeilen
+- so breit wie nötig und so schmall wie möglich
+- Breite festlegbar
+- höhe vom inhalt abhängig kann durch height beeinflusst werden
+
+inline: <a> <span> <strong> <h1>
+block: <article> <div> <p> 
+inline-block: <img>
+
+Veränderbar durch display: ...
+
+__________________________________________________________
+
+
+2. Was ist die automatische Höhe und Breite der unterschiedlichen Box-Typen, wenn die
+Werte nicht gesetzt sind? Wie wird die Gesamt-Breite der unterschiedlichen Box-Typen
+bestimmt?  -> siehe oben
+Wie wird der vertikale Abstand von zwei benachbarten Block-Elementen
+berechnet, z.B. von <h1> und <p>?
+
+-> collapsing margins:
+margins nicht addiert sondern größten Wert wird genommen
+
+__________________________________________________________
+
+
+3. Sie können das Vorschaufenster in Cloud9 nach links oder rechts verschieben und damit die
+Größe des Viewports verändern. Was passiert hierbei mit den Größen von block-Boxen?
+Mit welchen Eigenschaften kann man eine minimale und maximale Größe angeben?
+
+block-Boxen passen sich an Parenz-Element an 
+min-width, max-width, min-heighr, max-height
+
+________________________________________________________
+
+
+4. Was passiert, wenn von einer Box die Höhe und Breite gesetzt sind, es aber mehr Inhalt
+(z.B. Text) gibt als in diese Box passt? Mit welcher Eigenschaft wird dieses Verhalten
+kontrolliert?
+
+
+default:umbruch
+_________________________________________________________
+
+5. Was passiert mit einer block-Box, wenn diese kleiner als das Parent-Element ist und die
+linke und rechte margin auf auto gesetzt werden?
+
+zentriert

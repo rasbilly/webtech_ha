@@ -4,9 +4,7 @@
 	<title>A2</title>
 	<style type="text/css">
 		#overflow {
-    		white-space: nowrap; 
-    		overflow: hidden;
-    		text-overflow: ellipsis; 
+    		min-width: 500px;
     		border: 2px solid black;
 }
 
@@ -27,12 +25,12 @@
 				is the foundation of layout on the Web - each element is represented as a rectangular box
 			</span>
 
-			<!-- <div id="overflow"> -->
+			<div id="overflow"> 
 			, with the box‘s content, padding, border, and margin built up around one another
 			like the layers of an onion. As a browser renders a web page layout, it works out what
 			styles are applied to the content of each box, how big the surrounding onion layers are
 			, and where the boxes sit in relation to one another.
-			<!-- </div> -->
+			</div> 
 		</p>
 	</article>
 
@@ -53,8 +51,8 @@
 
 <style type="text/css">
 	li{
-		margin-left: 0px;
-		padding-left: 0px;
+		margin-left: 0;
+		padding-left: 0;
 		list-style-type: none;
 		float:left;
 		padding-left: 20px;
