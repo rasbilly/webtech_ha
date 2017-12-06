@@ -1,0 +1,56 @@
+header{
+		height:5em; 
+		border: 2px dashed black;
+	}
+
+	div{
+		position: relative;
+		border: 2px dashed orange;
+	}
+
+	nav{
+		position: absolute;
+		left:0;
+		max-width:150px;
+		border: 2px dashed black;
+		top: 0;
+		bottom: 0;
+	}
+	article{
+		position: relative;
+		left: 150px;
+		width:20em;
+		border: 2px dashed blue;
+		z-index: 2;
+	}
+	h2{
+		border: 2px dashed black;
+	}
+
+	#p1{
+		text-align:justify;
+		padding: 1em; 
+		height:15em; 
+		width:50%; 
+		border: 2px dashed green;
+	}
+
+	#p2{
+		border: 2px dashed black;
+	}
+
+	aside{
+		right: 0;
+		position: fixed;
+		border: 2px dashed green;
+		z-index: 4;
+
+	}
+
+
+	footer{
+		
+		text-align:center; 
+		height:3em; 
+		border: 2px dashed black;
+	}

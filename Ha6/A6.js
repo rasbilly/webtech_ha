@@ -42,5 +42,5 @@ function getAggregatedAge(list){
 }
 
 function getAmount(list){
-	return {Woman:filteredGender(list,"f").length, Men:filteredGender(list,"m").length}
+	return {Women:filterGender(list,"f").length, Men:filterGender(list,"m").length}
 }

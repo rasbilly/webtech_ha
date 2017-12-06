@@ -1,0 +1,50 @@
+*{
+	position: relative;
+}
+
+
+header{
+		height:5em; 
+		border: 2px dashed black;
+	}
+
+	div{
+		border: 2px dashed orange;
+	}
+
+	nav{
+		max-width:150px;
+		border: 2px dashed black;
+	}
+	article{
+		width:20em;
+		border: 2px dashed blue;
+	}
+	h2{
+		border: 2px dashed black;
+	}
+
+	#p1{
+		text-align:justify;
+		padding: 1em; 
+		height:15em; 
+		width:50%; 
+		border: 2px dashed green;
+	}
+
+	#p2{
+		border: 2px dashed black;
+	}
+
+	aside{
+		border: 2px dashed green;
+
+	}
+
+
+	footer{
+		
+		text-align:center; 
+		height:3em; 
+		border: 2px dashed black;
+	}

@@ -4,14 +4,34 @@
 	<title>A6.1</title>
 	<link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
-	<style type="text/css">
-		span{
-			color: blue;
+<style type="text/css">
+		div{
+			position: absolute;
+			bottom: 0;
 		}
 	</style>
-	<span style="">im Tag definierten Tag -> im Style Tag (in der Datei) -> externe Datei</span>
+<body>
 	
+	<div style="background-color: red; position: relative; left:30px; border:solid">
+		im Tag definierten Tag -> im Style Tag (in der Datei) -> externe Datei
+	</div>
+	<!-- inline: - nachteil ist keine Trennung zwischen style und content
+				 - Änderung von mehreren Tags aufwändig
+				 - gut für einfache spezifische Änderungen 
+
+
+
+		im Header:  - Trennung von Style und Content
+					- nicht gut geeignet, wenn man einfache kleine Veränderungen hat  
+					- mit jedem Aufruf einer neuen Seite die gesamte Formatierung jedes Mal mit laden
+					- bei mehreren Seiten mit gleichem Layout redundanter Code
+		
+		extern: - globale Seitenlayout möglich
+				- weniger Traffic
+				- lohnt sich nicht wenn es nur wenig, kleine Änderungen vorhanden sind
+
+
+	-->
 
 </body>
 </html>

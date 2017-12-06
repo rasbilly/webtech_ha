@@ -1,0 +1,72 @@
+<!--
+Universalselektor < Typselektor < Nachfahrselektor < Klassenselektor < Attributenselektor <  Pseudoklassen <ID-Selektor
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+	*{
+		background-color: red;
+	}
+
+	div{
+		background-color: green;
+	}
+
+	article div{
+		background-color: yellow; 
+	}
+
+	.a{
+		background-color: grey;
+	}
+
+	
+
+	div[title="divBlock"]{
+		background-color: black;
+	}
+
+ 
+	
+	div:hover{
+		background-color: pink;
+	}
+
+	#a{
+		background-color: blue;
+	}
+
+	div:not(*){
+		background-color: orange;
+	}
+
+	
+
+
+
+
+</style>
+
+</head>
+<body>
+
+	<article style="border: dashed;">
+		article
+		<div class="a" id="a" title="divBlock">
+			hier ist ein block
+		</div>
+		
+	</article>
+	
+
+</body>
+</html>
