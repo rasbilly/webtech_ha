@@ -3,15 +3,21 @@
 <head>
 	<title>Blog</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="geruest.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="stylesheetMain2.css"  media="screen and (min-width: 801px)" />
+	<link rel="stylesheet" type="text/css" href="stylesheetMain.css"  media="screen and (max-width: 800px)" />	
+		<link rel="stylesheet" type="text/css" href="printsheet.css"  media="print" />
 	<style type="text/css">
 
 
 
+
 	article{
+		position: relative;
 		width: 25em;
 		height: 30em;
-		margin-top: 2em;
+		margin-bottom: 2em;
 		border-style: dashed;
 		border-width: 0.3ex;
 		background-image: linear-gradient(to bottom, lightgrey, ivory); 
@@ -24,23 +30,21 @@
 		url(https://upload.wikimedia.org/wikipedia/commons/b/b9/Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg);
 		background-size: 10%,99%;
 		background-repeat: 	no-repeat,
-                     		no-repeat;
+		no-repeat;
 
 		background-position: bottom right, top center;
 
-        background-attachment: fixed, fixed;
+		background-attachment: fixed, fixed;
 
 	}
 </style>
 
 </head>
-<body>
-	
-
+<div class="row">
 
 	<header>
-		<h1>Blog</h1>
-		<nav>
+		<h1>Ryan-Marc Wegmeier</h1>	
+		<nav class="col-1">
 			<ul>
 				<li><a href="index.html">Willkommen</a></li>
 				<li><a href="blog.html">Blog</a></li>
@@ -50,9 +54,11 @@
 			</ul>
 
 		</nav>
-		
 	</header>
-	<main>
+
+
+
+	<main class="col-2">
 		<article>
 			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		</article>
@@ -63,16 +69,17 @@
 			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		</article>
 	</main>
-	<footer>
-		<nav id="nav2">
-			<ul>
-				<li><a href="datSchutz.html">Datenschutzerklärung</a></li>
-				<li><a href="impressum.html">Impressum</a></li>
-			</ul>
+</div>
+<footer>
+	<nav id="nav2">
+		<ul>
+			<li><a href="datSchutz.html">Datenschutzerklärung</a></li>
+			<li><a href="impressum.html">Impressum</a></li>
+		</ul>
 
-		</nav>
-		
-	</footer>
+	</nav>
+
+</footer>
 </body>
 </html>
 
