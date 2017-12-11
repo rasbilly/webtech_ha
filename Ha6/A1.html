@@ -9,12 +9,38 @@
 			position: absolute;
 			bottom: 0;
 		}
+		#child{
+			background-color: blue;
+		}
 	</style>
 <body>
 	
 	<div style="background-color: red; position: relative; left:30px; border:solid">
 		im Tag definierten Tag -> im Style Tag (in der Datei) -> externe Datei
 	</div>
+
+
+
+
+<!--
+	<div id="parent" style="background-color:red;position: relative; left:30px;" > parent
+		<div id="child" style="background-color:inherit;position: relative; left:30px;">
+			child
+		</div>
+	</div>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
 	<!-- inline: - nachteil ist keine Trennung zwischen style und content
 				 - Änderung von mehreren Tags aufwändig
 				 - gut für einfache spezifische Änderungen 

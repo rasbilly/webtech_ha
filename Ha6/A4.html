@@ -9,13 +9,29 @@ Positionierung aus dem Elementfluss herausgelöst wurde
 • Wenn der Anwender im Inhalt scrollt, scrollen absolut
 positionierte Elemente mit
 
--> nächsthöheres Element darf kein absolute sein
+
 
 
 
 2.)
+Relative Positionierung
+• Element wird aus dem normalen Elementfluss herausgelöst
+• Angaben zu seiner Positionierung orientieren sich an der
+Position, die das Element im Normalfall einnehmen würde
+• Wenn der Anwender im Inhalt scrollt, scrollen relativ
+positionierte Elemente mit
 
-ö
+
+4.)
+Fixe Positionierung
+• Element wird aus dem normalen Elementfluss herausgelöst
+• Positionierung ohne Rücksicht auf eventuell positionierte
+Elternelemente direkt an einer gewünschten Stelle im
+Anzeigenfenster
+• Wenn der Anwender im Inhalt scrollt, scrollen fix positionierte
+Elemente nicht mit 
+
+
 -->
 
 
@@ -24,64 +40,7 @@ positionierte Elemente mit
 <html>
 <head>
 	<title></title>
-	<style type="text/css">
-	header{
-		height:5em; 
-		border: 2px dashed black;
-	}
-
-	div{
-		position: relative;
-		border: 2px dashed orange;
-		height: 100%;
-	}
-
-	nav{
-		position: absolute;
-		left:0;
-		max-width:150px;
-		border: 2px dashed black;
-		height: inherit;
-	}
-	article{
-		position: relative;
-		left: 150px;
-		width:20em;
-		border: 2px dashed blue;
-	}
-	h2{
-		border: 2px dashed black;
-	}
-
-	#p1{
-		text-align:justify;
-		padding: 1em; 
-		height:15em; 
-		width:50%; 
-		border: 2px dashed green;
-	}
-
-	#p2{
-		border: 2px dashed black;
-	}
-
-	aside{
-		right: 0;
-		position: fixed;
-		border: 2px dashed green;
-	}
-
-
-	footer{
-		position: relative;
-		
-		text-align:center; 
-		height:3em; 
-		border: 2px dashed black;
-		width: 
-	}
-
-</style>
+	<link rel="stylesheet" type="text/css" href="A3_3.css">
 </head>
 <body>
 	<header>
@@ -95,11 +54,7 @@ positionierte Elemente mit
 				<li>Kontakt</li>
 			</ul>
 		</nav>
-		<aside>
-			<img src="werb1.jpg" alt="Werbung" width="100px" height="300px" style="display: inline-block;">
-			<br>
-			<a href="#top">Zum Anfang</a>
-		</aside>
+		
 		<article >
 			<h2>Überschrift</h2>
 			<p id="p1">
@@ -116,18 +71,13 @@ positionierte Elemente mit
 				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
 				dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
 				est Lorem ipsum dolor sit amet.
-			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-				nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-				sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-				rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-				ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-				elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-				dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-				est Lorem ipsum dolor sit amet.
-			</p>
 			</p>
 		</article>
+		<aside>
+			<img src="werb1.jpg" alt="Werbung" width="100px" height="300px" style="display: inline-block;">
+			<br>
+			<a href="#top">Zum Anfang</a>
+		</aside>
 
 	</div>
 	<footer>

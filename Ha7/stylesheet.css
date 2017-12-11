@@ -1,0 +1,37 @@
+
+
+.content {
+	border:solid;
+	font-size: 1em;
+  width: 300px;
+  height: 200px;
+  background: blue;
+  position: relative;
+  clear: both;
+ }
+
+#d1 {
+	border:solid;
+	border-top-width: 100%;
+	font-size: 2em;
+   width: 100px;
+   height: 100px;
+   margin-left: 50%;
+   margin-top:50%;
+   background: red;
+   position: absolute;
+   float: left;
+}
+
+#d2{
+	border:solid;
+	border-top-width: 5px;
+   font-size: 2em;
+   width: 100px;
+   height: 100px;
+   margin-left: 10%;
+   margin-top:150px;
+   background: green;
+   position: absolute;
+   float: left;
+}

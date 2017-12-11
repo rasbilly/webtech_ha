@@ -41,7 +41,8 @@ header{
 
 	aside{
 		right: 0;
-		position: fixed;
+		position: absolute;
+		top: 0;
 		border: 2px dashed green;
 		z-index: 4;
 

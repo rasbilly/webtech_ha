@@ -1,0 +1,53 @@
+Netzneutralität= Gleichbehandlung aller Daten in Datennetzen
+-> Neutrales Verhalten zwischen Absender Empfänger und Inhalt der Datenpakete
+-> kein Unterschied zwischen Tarifen und Anbieten
+-> gleiche Geschwindigkeit
+-> Zugang zu allen Netzen
+
+
+
+Gefahr:
+Telekomunikationsanbieter kategoriesieren Daten
+-> begrenzte Datenmenge für untere Schicht
+-> höhere Schicht bekommt uneingeschränkten Zugriff (extra Leistung)
+-> Zusätzlichen Abo
+
+Problematiken:
+- kein Zugriff auf Diensten
+- Einsicht in Dateien
+- Verlieren von universellen nutzen
+- StartUps und OpenSource Projekte schwierig
+
+
+
+vgl. PayTV anbieter
+
+FCC - Federal Communication Comission
+drei Gebote der Netzneutralität: 
+1. Provider kein Sperren von rechtmäßigen Inhalten und Diensten im Netz
+2. keine rechtmäßigen Inhalte ausbremsen
+3. gleichbehandlung aller Daten
+
+
+
+
+FCC.GOV/COMMENTS
+Voting dagegen  Telekomunikationsdienst meiden
+
+-----------------------------------------------------------------------------------------------------------------
+
+StreamOn:
+- bestimmte Partner die Kooperieren sind im Abo dazu
+- unbegrenzte Datenvolumen Musik und Videos
+- Telekom Magenta Tarif M - L (Audio und Video)
+- funktioniert solange bis Datenvolumen nicht aufgebracht ist
+
+- grauzone -> da sie den nutzer nicht zwingt netzwerke der partner zu nutzen -> indirektes bevorzugen der Partner
+
+
+
+
+
+
+
+
