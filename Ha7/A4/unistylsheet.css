@@ -1,0 +1,47 @@
+
+
+
+#topnav ul{
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#topnav ul li a{
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#topnav ul li {
+	display: inline-block;
+}
+
+#topnav ul li a:hover {
+    background-color: #111;
+}
+
+main{
+	border: solid;
+}
+
+footer nav ul li {
+    display: inline-block;
+
+}
+footer nav ul li a{
+	display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+footer ul{
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c1c1c1;
+}
