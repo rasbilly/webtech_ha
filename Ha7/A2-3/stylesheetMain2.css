@@ -17,14 +17,18 @@ header{
 	position: absolute;
 	left: 0;
     border-bottom: solid;
-    margin:-left:0;
-    padding: left:0;
+    
 }
 .row ul {
-    margin: 0;
+    
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    text-decoration: none;
+}
+
+.row ul li{
+     list-style-type: none;
 }
 
 
