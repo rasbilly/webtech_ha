@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 main{
 
 	position: relative;
@@ -7,8 +11,7 @@ main{
 	height: 100vh;
 	overflow-y:scroll; 
 	position: relative;
-    border-left: solid;
-    border-right:solid;
+    
 
 }
 
@@ -31,8 +34,7 @@ header{
 	main{
 		width: 100%;
 		overflow-y:scroll; 
-    	border-left: solid;
-    	border-right:solid;
+    	
 	}
 }
 
@@ -51,6 +53,7 @@ header ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    text-align: right;
 }
 
 
