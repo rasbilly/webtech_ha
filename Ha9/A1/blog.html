@@ -4,11 +4,12 @@
 	<title>Blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
+ 	<script src="A1script.js"></script>
 
 	
 	<style type="text/css">
@@ -16,13 +17,17 @@
 
 
 
+	main form table{
+		background-color: wheat;
+	}
+	
+
 	article{
 
 		position: relative;
 		width: 25em;
 		height: 30em;
 		margin-bottom: 2em;
-		margin: 0 auto;
 		border-style: dashed;
 		border-width: 0.3ex;
 		background-image: linear-gradient(to bottom, lightgrey, ivory); 
@@ -43,6 +48,13 @@
 
 	}
 
+	main *{
+
+		margin: 0 auto;
+	}
+
+
+
 
 </style>
 
@@ -59,7 +71,7 @@
 
 <body style="background-color: wheat;">
 	<header>
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
   <!-- Brand -->
    <a class="navbar-brand" href="index.html">
     <img src="cat-profile.png" width="30" height="30" alt="">
@@ -117,15 +129,31 @@
 
 
 		<main style="margin-top: 100px;">
-		<article>
-			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-		</article>
-		<article>
-			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-		</article>
-		<article>
-			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-		</article>
+		<section id="art">
+
+		
+		</section>
+		<section>
+		<form>
+		<table>
+			<tr>
+				<th>Überschrift: </th>
+				<td><input type="text" id="ueberschrift" required></td>
+			</tr>
+			<tr>
+				<th>Artikel: </th>
+				<td><textarea id="artikelText" rows="20" cols="50" required></textarea></td>
+			</tr>
+			<tr>
+			<th></th>
+				<td><input type="button" id="post" value="Post" onclick="pushToSide('art','ueberschrift', 'artikelText')">
+				<input type="reset" id="delete" value="Reset"></td>
+			</tr>
+		</table>
+			
+			
+		</form>
+		</section>
 	</main>
 
 <footer>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kontakt</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="unistylsheet.css">
+
+
+
+
+
+</head>
+<body style="background-color: wheat;">
+	<header>
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+  <!-- Brand -->
+   <a class="navbar-brand" href="index.html">
+    <img src="cat-profile.png" width="30" height="30" alt="">
+    Ryan-Marc Wegmeier
+  </a>
+
+   <button class="navbar-toggler"  data-toggle="collapse" data-target="#navi">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="navi">
+
+ <form class="form-inline my-2 my-lg-0">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">  
+   </form>
+
+    <div class="navbar-text" style="margin-left: 10px;"> hier ist ein Text</div>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link active bg-warning" href="index.html">Wilkommen</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="blog.html">Blog</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="kontakt.html">Kontakt</a>
+      </li> 
+ 	<li class="nav-item ">
+        <a class="nav-link" href="autor.html">Über den Autor</a> 
+     </li> 
+     
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" >
+          Dropdown
+        </a>
+        <div class="dropdown-menu dropup">
+          <a class="dropdown-item" href="#">A
+          </a>
+          <a class="dropdown-item" href="#">B</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">C</a>
+        </div>
+      </li>
+
+    </ul>
+
+
+  </div> 
+
+
+</nav>
+	</header>
+
+
+		<main style="margin-top: 100px;">
+		<form style="padding-left:10px">
+			<fieldset>
+				<legend>pflicht</legend>
+
+				<table>
+					<tr>
+						<td><label for="name">Name:</label></td>
+						<td><input type="text"  id="name" required></td>
+					</tr>
+					<tr>
+						<td><label for="email">E-Mail-Adresse:</label></td>
+						<td><input type="email"  id="email" required></td>
+					</tr>
+
+					<tr>
+						<td>Geschlecht:</td>
+						<td>
+							<label for="male">Male:</label>
+							<input type="radio" name="gender" id="male" required>
+
+							<label for="female">Female:</label>
+							<input type="radio" name="gender" id="female" value="female" required>						
+
+							<label for="other">Other:</label>
+							<input type="radio" name="gender" id="other" value="other" required>							
+						</td>
+					</tr>
+					<tr>
+						<td><label for="betreff">Betreff:</label></td>
+						<td><input type="text" id="betreff" required></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><textarea  id="textfeld" required></textarea></td>
+					</tr>
+
+
+				</table>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>optional</legend>
+				<table>
+					<tr>
+						<td><label for="anrede">Anrede:</label></td>
+						<td>
+							<select  id="anrede">
+								<option value="Prof.">Prof</option>
+								<option value="Dr.">Dr.</option>
+								<option value="None">-</option>
+							</select>
+						</td>
+
+					</tr>
+					<tr>
+						<td><label for="telNr">Telefonnummer:</label></td>
+						<td><input type="tel" name="telNr" id="telNr"></td>
+					</tr>
+					<tr>
+						<td><label for="Website">Website:</label></td>
+						<td><input type="url" name="Website" id="Website"></td>
+					</tr>
+					<tr>
+						<td><label for="datum-zeit">Datum-Zeit:</label></td>
+						<td><input type="datetime-local" name="datum-zeit" id="datum-zeit"></td>
+					</tr>
+					<tr>
+						<td><label for="thema">Thema:</label></td>
+						<td>
+							<select name="thema" id="thema">
+								<option value="Newsletter.">Newsletter</option>
+								<option value="Webseite.">Webseite</option>
+								<option value="Werbung">Werbung</option>
+								<option value="Andere">Andere</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="Datei">Datei:</label></td>
+						<td><input type="file" name="Datei" id="Datei"></td>
+					</tr>
+					<tr>
+						<td><label for="Color"> Farbe:</label></td>
+						<td><input type="color" name="Color" id="Color"/></td>
+					</tr>
+
+
+				</table>
+
+
+
+			</fieldset>
+
+			<br>
+			<input type="submit" value="Submit">
+			<input type="reset" value="restet">
+		</form>
+
+
+	</main>
+	</div>
+
+
+	<footer>
+		<nav id="nav2">
+			<ul>
+				<li><a href="datSchutz.html">Datenschutzerklärung</a></li>
+				<li><a href="impressum.html">Impressum</a></li>
+			</ul>
+
+		</nav>
+
+	</footer>
+
+</body>
+</html>
+
+<!-- 
+• Wieso ist es hilfreich dieses zu verwenden?
+	- Durch attributenselektor zugriff über alle cols
+	- skallierung einfacher
+
+• Was passiert bei dem Rastersystem, wenn die HTML-Elemente genau auf 100% Breite
+verteilt sind und der Rand eines Elements auf eine Größe von 3px gesetzt wird? (z.B. beim
+<main>-Block im zweispaltigen Layout) Wie können Sie das Problem lösen?
+	- Verschiebung des Blocks nach unten
+	- Rand+Breite = Gesamtblock
+	-> Lösung Breite verkleinern und Rand breite übergeben
+
+• Was bewirkt der CSS-Deklarationsblock [class*="col-"]{ float: left }?
+	alle Tags mit dem Attribut class mit dem Wert"col-" erhalten attribut float:left
+ 
+• Was bewirkt der komplette CSS-Deklarationsblock .row::after{ }?
+	- gegenstück zu ::before
+	- am Ende der rows wird der Kontent auf "" gesetzt
+	- content sorgt für Umbruch und beenden des blocks
+
+
+-->

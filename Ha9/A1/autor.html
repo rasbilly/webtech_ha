@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Autor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="unistylsheet.css">
+
+
+
+
+
+</head>
+<body style="background-color: wheat;">
+	<header>
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+  <!-- Brand -->
+   <a class="navbar-brand" href="index.html">
+    <img src="cat-profile.png" width="30" height="30" alt="">
+    Ryan-Marc Wegmeier
+  </a>
+
+   <button class="navbar-toggler"  data-toggle="collapse" data-target="#navi">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="navi">
+
+ <form class="form-inline my-2 my-lg-0">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">  
+   </form>
+
+    <div class="navbar-text" style="margin-left: 10px;"> hier ist ein Text</div>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link active bg-warning" href="index.html">Wilkommen</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="blog.html">Blog</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="kontakt.html">Kontakt</a>
+      </li> 
+ 	<li class="nav-item ">
+        <a class="nav-link" href="autor.html">Über den Autor</a> 
+     </li> 
+     
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" >
+          Dropdown
+        </a>
+        <div class="dropdown-menu dropup">
+          <a class="dropdown-item" href="#">A
+          </a>
+          <a class="dropdown-item" href="#">B</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">C</a>
+        </div>
+      </li>
+
+    </ul>
+
+
+  </div> 
+
+
+</nav>
+	</header>
+
+
+		<main style="margin-top: 100px;">
+					<article>
+						<section itemscope itemtype="http://schema.org/Person">
+							<table>
+								<caption><h2>Lebenslauf</h2></caption>
+								<thead>
+									<tr>
+										<th><h3>Persönliche Daten</h3></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Vorname</th>
+										<td><span itemprop="givenName">Ryan</span>-<span itemprop="additionalName">Marc</span></td>
+									</tr>
+									<tr>
+										<th>Name</th>
+										<td itemprop="familyName">Wegmeier</td>
+									</tr>
+									<tr>
+										<th>Geschlecht</th>
+										<td itemprop="gender">männlich</td>
+									</tr>
+									<tr>
+										<th>Geb.-Tag</th>
+										<td itemprop="birthDate">01.05.1996</td>
+									</tr>
+									<tr>
+										<th>Geb.-Ort</th>
+										<td itemprop="birthPlace">München</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>Anschrift</th>
+										<td><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">Möwenstraße 28</span> <br> <span itemprop="postalCode">14612</span>, <span itemprop="homeLocation"></span>Falkensee</span>
+										</td>
+									</tr>
+									<tr>
+										<th>Tel.</th>
+										<td itemprop="telephone">0123/456789</td>
+									</tr>
+
+									<tr>
+										<th>E-Mail</th>
+										<td itemprop="email">r.wegmeier@campus.tu-berlin.de</td>
+									</tr>
+								</tfoot>
+
+							</table>
+
+						</section>
+						<section>
+							<div itemprop="image">
+								<img src="profil.png">
+							</div>
+							<p>
+								Mein Name ist Ryan-Marc Wegmeier. Ich bin 21 Jahre alt und komme ursprünglich aus <span itemprop="birthPlace">München</span>, lebe jedoch <br>mittlerweile seit meinem 10. Lebensjahr in <span itemprop="homeLocation">Falkensee</span>. Ich <span itemprop="jobTitle">studiere Wirtschaftsinformatik</span> an der <span itemprop="workLocation">Technischen <br>Universität Berlin (TU-Berlin)</span> und bin jetzt im 5. Semester.Ich bin ebenfalls leidenschaftlicher Fußballspieler und spiele jetzt schon seit 15 Jahren. Sprachen die ich spreche sind <span itemprop="nationality">deutsch</span>, tagalog, englisch und ein bisschen spanisch.
+							</p>
+						</section>
+					</article>
+
+				</main>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<nav id="nav2">
+			<ul>
+				<li><a href="datSchutz.html">Datenschutzerklärung</a></li>
+				<li><a href="impressum.html">Impressum</a></li>
+			</ul>
+
+		</nav>
+
+	</footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+
+
+main{
+	border: solid;
+}
+
+footer nav ul li {
+    display: inline-block;
+
+}
+footer nav ul li a{
+	display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+footer ul{
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c1c1c1;
+}

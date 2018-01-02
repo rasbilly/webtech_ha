@@ -1,12 +1,6 @@
-<style>
-  /* Defines a cleaner look for tables */
-  table  { border: 1px solid; }
-  td, th { border: 1px solid black; padding: 3px 8px; }
-  th     { text-align: left; }
-</style>
 
-<script>
-   function buildTable(data) {
+
+  function buildTable(data) {
   var table=document.createElement("table") 
   var trHead=document.createElement("tr")
     

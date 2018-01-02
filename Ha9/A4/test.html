@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="test.js"></script>
+</head>
+<body>
+<input type="button" onclick="change('#temp1')" name="btn1" value="btn1">
+<input type="button" onclick="change('#temp2')" name="btn2" value="btn2">
+<div id=content></div>
+
+<template id="temp1">
+	<div>
+		hier ist die erste seite
+	</div>
+</template>
+
+<template id="temp2">
+	<div>
+		hier ist die zweite seite
+	</div>
+</template>
+
+<script>
+	function change(temp){
+		var content=document.querySelector("#content")
+
+		var template=document.querySelector(temp)
+		var clone=template.content.cloneNode(true)
+
+
+		while(content.firstChild){
+			content.firstChild.remove();
+		}
+		content.appendChild(clone)
+	}
+
+</script>
+
+</body>
+</html>

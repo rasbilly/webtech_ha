@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Willkommen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="unistylsheet.css">
+<script src="A1script.js"></script>
+
+<script>
+
+window.onhashchange = function() { 
+  
+  openSide()
+ 
+}
+
+function openSide(){
+
+
+
+
+  var url=window.location.href
+
+     var other= document.querySelectorAll("[href*=file]")
+     var now=""
+     other.forEach(e=>{
+      if(e.getAttribute("href")==url){
+        now=e
+      }
+     })
+
+
+     now.click()
+
+
+     
+
+
+
+    }
+
+  function useTemp(temp,id, rest){
+    
+
+   var current=document.getElementById(id)
+   var active= document.querySelectorAll('[class*="nav-link active"]')[0]
+    active.classList.remove("active")
+    active.classList.remove("bg-warning")
+    current.classList.add("active")
+    current.classList.add("bg-warning")
+
+    var content=document.querySelector("#content")
+
+    var template=document.querySelector(temp)
+    var clone=template.content.cloneNode(true)
+
+
+    while(content.firstChild){
+      content.firstChild.remove();
+    }
+    content.appendChild(clone)
+
+    if(rest==undefined && window.innerWidth<=960)document.querySelector(".navbar-toggler").click()
+
+  }
+
+</script>
+
+
+
+
+
+
+</head>
+<body style="background-color: wheat;" onload="openSide()">
+	<header>
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html">
+        <img src="cat-profile.png" width="30" height="30" alt="">
+        Ryan-Marc Wegmeier
+      </a>
+
+      <button class="navbar-toggler"  data-toggle="collapse" data-target="#navi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navi">
+
+       <form class="form-inline my-2 my-lg-0">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">  
+      </form>
+
+      <div class="navbar-text" style="margin-left: 10px;"> hier ist ein Text</div>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item pointer ">
+          <a class="nav-link active bg-warning" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Willkommen" id="navwillkommen" onclick="useTemp('#willkommen',this.id)">Wilkommen</a>
+          
+        </li>
+        <li class="nav-item pointer">
+          <a class="nav-link" id="navblog" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Blog" onclick="useTemp('#blog',this.id)">Blog</a>
+        </li>
+        <li class="nav-item pointer">
+          <a class="nav-link" id="navkontakt" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Kontakt"onclick="useTemp('#kontakt',this.id)">Kontakt</a>
+        </li> 
+        <li class="nav-item pointer">
+          <a class="nav-link" id="navautor" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Autor"onclick="useTemp('#autor',this.id)">Über den Autor</a> 
+        </li> 
+
+        <li class="nav-item dropdown pointer">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" >
+            Dropdown
+          </a>
+          <div class="dropdown-menu dropup">
+            <a class="dropdown-item" href="#">A
+            </a>
+            <a class="dropdown-item" href="#">B</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">C</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+    </div> 
+
+
+  </nav>
+</header>
+
+
+<main style="margin-top: 100px;">
+<div id="content"></div>
+<template id="willkommen">
+  
+ <section>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/uPlhTKqGoLc" frameborder="0" allowfullscreen title="iframe example 1" align="center"></iframe>
+
+  <iframe src="https://www.haubeil.com/" name="test" scrolling="yes" frameborder="0" align="right"></iframe>
+
+
+</section>
+<section>
+  <audio controls autoplay loop>
+   <source src="audiofile.mp3" type="audio/mp3" >
+   </audio>
+ </section>
+</template>
+
+<template id="kontakt">
+ <form style="padding-left:10px">
+  <fieldset>
+    <legend>pflicht</legend>
+
+    <table>
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text"  id="name" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">E-Mail-Adresse:</label></td>
+        <td><input type="email"  id="email" required></td>
+      </tr>
+
+      <tr>
+        <td>Geschlecht:</td>
+        <td>
+          <label for="male">Male:</label>
+          <input type="radio" name="gender" id="male" required>
+
+          <label for="female">Female:</label>
+          <input type="radio" name="gender" id="female" value="female" required>            
+
+          <label for="other">Other:</label>
+          <input type="radio" name="gender" id="other" value="other" required>              
+        </td>
+      </tr>
+      <tr>
+        <td><label for="betreff">Betreff:</label></td>
+        <td><input type="text" id="betreff" required></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><textarea  id="textfeld" required></textarea></td>
+      </tr>
+
+
+    </table>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>optional</legend>
+    <table>
+      <tr>
+        <td><label for="anrede">Anrede:</label></td>
+        <td>
+          <select  id="anrede">
+            <option value="Prof.">Prof</option>
+            <option value="Dr.">Dr.</option>
+            <option value="None">-</option>
+          </select>
+        </td>
+
+      </tr>
+      <tr>
+        <td><label for="telNr">Telefonnummer:</label></td>
+        <td><input type="tel" name="telNr" id="telNr"></td>
+      </tr>
+      <tr>
+        <td><label for="Website">Website:</label></td>
+        <td><input type="url" name="Website" id="Website"></td>
+      </tr>
+      <tr>
+        <td><label for="datum-zeit">Datum-Zeit:</label></td>
+        <td><input type="datetime-local" name="datum-zeit" id="datum-zeit"></td>
+      </tr>
+      <tr>
+        <td><label for="thema">Thema:</label></td>
+        <td>
+          <select name="thema" id="thema">
+            <option value="Newsletter.">Newsletter</option>
+            <option value="Webseite.">Webseite</option>
+            <option value="Werbung">Werbung</option>
+            <option value="Andere">Andere</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="Datei">Datei:</label></td>
+        <td><input type="file" name="Datei" id="Datei"></td>
+      </tr>
+      <tr>
+        <td><label for="Color"> Farbe:</label></td>
+        <td><input type="color" name="Color" id="Color"/></td>
+      </tr>
+
+
+    </table>
+
+
+
+  </fieldset>
+
+  <br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="restet">
+</form>
+
+</template>
+
+<template id="autor">
+  
+
+
+<article>
+            <section itemscope itemtype="http://schema.org/Person">
+              <table>
+                <caption><h2>Lebenslauf</h2></caption>
+                <thead>
+                  <tr>
+                    <th><h3>Persönliche Daten</h3></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Vorname</th>
+                    <td><span itemprop="givenName">Ryan</span>-<span itemprop="additionalName">Marc</span></td>
+                  </tr>
+                  <tr>
+                    <th>Name</th>
+                    <td itemprop="familyName">Wegmeier</td>
+                  </tr>
+                  <tr>
+                    <th>Geschlecht</th>
+                    <td itemprop="gender">männlich</td>
+                  </tr>
+                  <tr>
+                    <th>Geb.-Tag</th>
+                    <td itemprop="birthDate">01.05.1996</td>
+                  </tr>
+                  <tr>
+                    <th>Geb.-Ort</th>
+                    <td itemprop="birthPlace">München</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Anschrift</th>
+                    <td><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">Möwenstraße 28</span> <br> <span itemprop="postalCode">14612</span>, <span itemprop="homeLocation"></span>Falkensee</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Tel.</th>
+                    <td itemprop="telephone">0123/456789</td>
+                  </tr>
+
+                  <tr>
+                    <th>E-Mail</th>
+                    <td itemprop="email">r.wegmeier@campus.tu-berlin.de</td>
+                  </tr>
+                </tfoot>
+
+              </table>
+
+            </section>
+            <section>
+              <div itemprop="image">
+                <img src="profil.png">
+              </div>
+              <p>
+                Mein Name ist Ryan-Marc Wegmeier. Ich bin 21 Jahre alt und komme ursprünglich aus <span itemprop="birthPlace">München</span>, lebe jedoch <br>mittlerweile seit meinem 10. Lebensjahr in <span itemprop="homeLocation">Falkensee</span>. Ich <span itemprop="jobTitle">studiere Wirtschaftsinformatik</span> an der <span itemprop="workLocation">Technischen <br>Universität Berlin (TU-Berlin)</span> und bin jetzt im 5. Semester.Ich bin ebenfalls leidenschaftlicher Fußballspieler und spiele jetzt schon seit 15 Jahren. Sprachen die ich spreche sind <span itemprop="nationality">deutsch</span>, tagalog, englisch und ein bisschen spanisch.
+              </p>
+            </section>
+          </article>
+</template>
+<template id="blog">
+
+
+
+<style type="text/css">
+
+
+
+
+  main form table{
+    background-color: wheat;
+  }
+  
+
+  article{
+
+    position: relative;
+    width: 25em;
+    height: 30em;
+    margin-bottom: 2em;
+    border-style: dashed;
+    border-width: 0.3ex;
+    background-image: linear-gradient(to bottom, lightgrey, ivory); 
+
+  }
+  body{
+    background-color: wheat;
+    background-image: 
+    url(https://www.snet.tu-berlin.de/fileadmin/_processed_/e/ec/csm_sn_mz_rgb_mittel_b0c0d3b1d0.jpg), 
+    url(https://upload.wikimedia.org/wikipedia/commons/b/b9/Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg);
+    background-size: 10%,99%;
+    background-repeat:  no-repeat,
+    no-repeat;
+
+    background-position: bottom right, top center;
+
+    background-attachment: fixed, fixed;
+
+  }
+
+  main *{
+
+    margin: 0 auto;
+  }
+
+
+
+
+</style>
+
+  
+    <section id="art">
+    
+          
+
+    </section>
+    <section>
+    <form>
+      <br>
+    <table>
+      <tr>
+        <th>Überschrift: </th>
+        <td><input type="text" id="ueberschrift" required="true"></td>
+      </tr>
+      <tr>
+        <th>Artikel: </th>
+        <td><textarea id="artikelText" rows="20" cols="50" required="true"></textarea></td>
+      </tr>
+      <tr>
+      <th></th>
+        <td><input type="button" id="post" value="Post" onclick="pushToSide('art','ueberschrift', 'artikelText')">
+        <input type="reset" id="delete" value="Reset"></td>
+      </tr>
+    </table>
+      
+      
+    </form>
+    </section>
+
+    <script src="json.js"></script>
+</template>
+
+<template id="datenschutz"></template>
+<template id="impressum"></template>
+</main>
+<footer>
+ <nav id="nav2">
+  <ul>
+   <li><a class="pointer" onclick="useTemp('#datenschutz',this.id)">Datenschutzerklärung</a></li>
+   <li><a class="pointer" onclick="useTemp('#impressum'this.id)">Impressum</a></li>
+ </ul>
+
+</nav>
+
+</footer>
+</body>
+</html>
+
