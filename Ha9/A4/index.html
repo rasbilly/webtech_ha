@@ -25,6 +25,13 @@ function openSide(){
 
 
   var url=window.location.href
+  var splitURL=url.split(".")
+  if(splitURL[splitURL.length-1]=="html"){
+    console.log(url)
+    url=document.querySelectorAll("[href*=file]")[0].getAttribute("href")
+    console.log(url)
+   
+  }
 
      var other= document.querySelectorAll("[href*=file]")
      var now=""
@@ -36,6 +43,9 @@ function openSide(){
 
 
      now.click()
+     
+     
+     
 
 
      
@@ -44,7 +54,7 @@ function openSide(){
 
     }
 
-  function useTemp(temp,id, rest){
+  function useTemp(temp,id){
     
 
    var current=document.getElementById(id)
@@ -65,7 +75,9 @@ function openSide(){
     }
     content.appendChild(clone)
 
-    if(rest==undefined && window.innerWidth<=960)document.querySelector(".navbar-toggler").click()
+    var navi=document.querySelector("#navi")
+     
+  if(window.innerWidth<=960 && navi.getAttribute("class")=="navbar-collapse collapse show")navi.setAttribute("class","navbar-collapse collapse")
 
   }
 
@@ -86,7 +98,7 @@ function openSide(){
         Ryan-Marc Wegmeier
       </a>
 
-      <button class="navbar-toggler"  data-toggle="collapse" data-target="#navi">
+      <button class="navbar-toggler"  data-toggle="collapse" data-target="#navi" id="foldButton">
         <span class="navbar-toggler-icon"></span>
       </button>
 
