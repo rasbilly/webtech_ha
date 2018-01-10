@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>Willkommen</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -24,16 +24,15 @@ function openSide(){
 
 
 
-  var url=window.location.href
-  var splitURL=url.split(".")
-  if(splitURL[splitURL.length-1]=="html"){
-    console.log(url)
-    url=document.querySelectorAll("[href*=file]")[0].getAttribute("href")
-    console.log(url)
+  var url=window.location.hash
+  
+  
+  if(url===""){
+    url=document.querySelectorAll("[href*='#']")[0].getAttribute("href")
    
   }
 
-     var other= document.querySelectorAll("[href*=file]")
+     var other= document.querySelectorAll("[href*='#']")
      var now=""
      other.forEach(e=>{
       if(e.getAttribute("href")==url){
@@ -41,8 +40,9 @@ function openSide(){
       }
      })
 
+     now==""?alert("Website nicht vorhanden"):now.click()
 
-     now.click()
+
      
      
      
@@ -93,7 +93,7 @@ function openSide(){
 	<header>
 		<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
       <!-- Brand -->
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="#Willkommen">
         <img src="cat-profile.png" width="30" height="30" alt="">
         Ryan-Marc Wegmeier
       </a>
@@ -113,29 +113,29 @@ function openSide(){
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item pointer ">
-          <a class="nav-link active bg-warning" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Willkommen" id="navwillkommen" onclick="useTemp('#willkommen',this.id)">Wilkommen</a>
+          <a class="nav-link active bg-warning" href="#Willkommen" id="navwillkommen" onclick="useTemp('#willkommen',this.id)">Wilkommen</a>
           
         </li>
         <li class="nav-item pointer">
-          <a class="nav-link" id="navblog" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Blog" onclick="useTemp('#blog',this.id)">Blog</a>
+          <a class="nav-link" id="navblog" href="#Blog" onclick="useTemp('#blog',this.id)">Blog</a>
         </li>
         <li class="nav-item pointer">
-          <a class="nav-link" id="navkontakt" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Kontakt"onclick="useTemp('#kontakt',this.id)">Kontakt</a>
+          <a class="nav-link" id="navkontakt" href="#Kontakt"onclick="useTemp('#kontakt',this.id)">Kontakt</a>
         </li> 
         <li class="nav-item pointer">
-          <a class="nav-link" id="navautor" href="file:///home/ryan/Dokumente/1Uni/Sem5/WebTech/UE/Ha9/A4/index.html#Autor"onclick="useTemp('#autor',this.id)">Über den Autor</a> 
+          <a class="nav-link" id="navautor" href="#Autor"onclick="useTemp('#autor',this.id)">Über den Autor</a> 
         </li> 
 
         <li class="nav-item dropdown pointer">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" >
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" data-toggle="dropdown" >
             Dropdown
           </a>
           <div class="dropdown-menu dropup">
-            <a class="dropdown-item" href="#">A
+            <a class="dropdown-item" >A
             </a>
-            <a class="dropdown-item" href="#">B</a>
+            <a class="dropdown-item" >B</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">C</a>
+            <a class="dropdown-item" >C</a>
           </div>
         </li>
 
@@ -420,13 +420,32 @@ function openSide(){
 <template id="impressum"></template>
 </main>
 <footer>
- <nav id="nav2">
-  <ul>
-   <li><a class="pointer" onclick="useTemp('#datenschutz',this.id)">Datenschutzerklärung</a></li>
-   <li><a class="pointer" onclick="useTemp('#impressum'this.id)">Impressum</a></li>
+
+
+
+
+
+<nav class="navbar navbar-expand bg-dark navbar-dark">
+<div class="container-fluid">
+    
+      <ul class="navbar-nav mr-auto bg-dark">
+   <li class="nav-item pointer"><a id=navdatenschutz class="nav-link" href="#Datenschutzerklaerung" onclick="useTemp('#datenschutz',this.id)">Datenschutzerklärung</a></li>
+   <li class="nav-item pointer"><a id=navimpressum class=" nav-link" href="#Impressum" onclick="useTemp('#impressum',this.id)">Impressum</a></li>
  </ul>
 
-</nav>
+
+
+</div>
+  </nav>
+
+
+
+    
+
+       
+          
+        
+        
 
 </footer>
 </body>

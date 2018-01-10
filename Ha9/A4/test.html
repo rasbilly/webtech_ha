@@ -3,39 +3,40 @@
 <head>
 	<title></title>
 	<script type="test.js"></script>
+	<title>Willkommen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="unistylsheet.css">
+<script src="A1script.js"></script>
 </head>
 <body>
-<input type="button" onclick="change('#temp1')" name="btn1" value="btn1">
-<input type="button" onclick="change('#temp2')" name="btn2" value="btn2">
-<div id=content></div>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
 
-<template id="temp1">
-	<div>
-		hier ist die erste seite
-	</div>
-</template>
-
-<template id="temp2">
-	<div>
-		hier ist die zweite seite
-	</div>
-</template>
-
-<script>
-	function change(temp){
-		var content=document.querySelector("#content")
-
-		var template=document.querySelector(temp)
-		var clone=template.content.cloneNode(true)
-
-
-		while(content.firstChild){
-			content.firstChild.remove();
-		}
-		content.appendChild(clone)
-	}
-
-</script>
-
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 </body>
 </html>
