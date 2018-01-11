@@ -76,7 +76,7 @@ function openSide(){
 
 
 
-   // if ('content' in document.createElement('template')) {
+  //  if ('content' in document.createElement('template')) {
     if(false){
     var content=document.querySelector("#content")
 
@@ -91,7 +91,8 @@ function openSide(){
 
   }else{
     alert("templates werden nicht unterstuetzt")
-    var templates=document.querySelectorAll("[name*='template']")
+    var templates=document.getElementsByName("template")
+    console.log(templates.length)
     templates.forEach(e=>{
       e.classList.add("toHide")
      
@@ -478,7 +479,7 @@ function openSide(){
     
       <ul class="navbar-nav mr-auto bg-dark">
    <li class="nav-item pointer"><a id=navdatenschutz class="nav-link" href="#Datenschutzerklaerung" onclick="useTemp('datenschutz',this.id)">Datenschutzerklärung</a></li>
-   <li class="nav-item pointer"><a id=navimpressum class=" nav-link" href="#Impressum" onclick="useTemp('impressum',this.id)">Impressum</a></li>
+   <li class="nav-item pointer"><a id=navimpressum class=" nav-link" href="#Impressum" onclick="useTemp('#impressum',this.id)">Impressum</a></li>
  </ul>
 
 
