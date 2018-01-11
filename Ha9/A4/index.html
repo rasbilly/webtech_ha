@@ -11,6 +11,14 @@
  <link rel="stylesheet" type="text/css" href="unistylsheet.css">
 <script src="A1script.js"></script>
 
+<style type="text/css">
+  
+  .toHide{
+        visibility: hidden
+  }
+
+</style>
+
 <script>
 
 window.onhashchange = function() { 
@@ -18,6 +26,8 @@ window.onhashchange = function() {
   openSide()
  
 }
+
+
 
 function openSide(){
 
@@ -64,9 +74,13 @@ function openSide(){
     current.classList.add("active")
     current.classList.add("bg-warning")
 
+
+
+   // if ('content' in document.createElement('template')) {
+    if(false){
     var content=document.querySelector("#content")
 
-    var template=document.querySelector(temp)
+    var template=document.getElementById(temp)
     var clone=template.content.cloneNode(true)
 
 
@@ -74,6 +88,25 @@ function openSide(){
       content.firstChild.remove();
     }
     content.appendChild(clone)
+
+  }else{
+    alert("templates werden nicht unterstuetzt")
+    var templates=document.querySelectorAll("[name*='template']")
+    templates.forEach(e=>{
+      e.classList.add("toHide")
+     
+    })
+    var content=document.querySelector("#content")
+    temp="t"+temp
+    var template=document.getElementById("t"+temp)
+    console.log(template)
+    template.forEach(e=>{
+
+        var clone=f.cloneNode(true)
+        content.appendChild(clone)
+
+    })
+  }
 
     var navi=document.querySelector("#navi")
      
@@ -113,17 +146,17 @@ function openSide(){
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item pointer ">
-          <a class="nav-link active bg-warning" href="#Willkommen" id="navwillkommen" onclick="useTemp('#willkommen',this.id)">Wilkommen</a>
+          <a class="nav-link active bg-warning" href="#Willkommen" id="navwillkommen" onclick="useTemp('willkommen',this.id)">Wilkommen</a>
           
         </li>
         <li class="nav-item pointer">
-          <a class="nav-link" id="navblog" href="#Blog" onclick="useTemp('#blog',this.id)">Blog</a>
+          <a class="nav-link" id="navblog" href="#Blog" onclick="useTemp('blog',this.id)">Blog</a>
         </li>
         <li class="nav-item pointer">
-          <a class="nav-link" id="navkontakt" href="#Kontakt"onclick="useTemp('#kontakt',this.id)">Kontakt</a>
+          <a class="nav-link" id="navkontakt" href="#Kontakt"onclick="useTemp('kontakt',this.id)">Kontakt</a>
         </li> 
         <li class="nav-item pointer">
-          <a class="nav-link" id="navautor" href="#Autor"onclick="useTemp('#autor',this.id)">Über den Autor</a> 
+          <a class="nav-link" id="navautor" href="#Autor"onclick="useTemp('autor',this.id)">Über den Autor</a> 
         </li> 
 
         <li class="nav-item dropdown pointer">
@@ -152,7 +185,7 @@ function openSide(){
 <main style="margin-top: 100px;">
 <div id="content"></div>
 <template id="willkommen">
-  
+  <div id="twillkommen" name="template">
  <section>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/uPlhTKqGoLc" frameborder="0" allowfullscreen title="iframe example 1" align="center"></iframe>
 
@@ -165,9 +198,12 @@ function openSide(){
    <source src="audiofile.mp3" type="audio/mp3" >
    </audio>
  </section>
+ </div>
 </template>
 
 <template id="kontakt">
+  <div id="tkontakt" name="template">
+
  <form style="padding-left:10px">
   <fieldset>
     <legend>pflicht</legend>
@@ -266,10 +302,12 @@ function openSide(){
   <input type="submit" value="Submit">
   <input type="reset" value="restet">
 </form>
-
+</div>
 </template>
 
 <template id="autor">
+  <div id="tautor" name="template">
+
   
 
 
@@ -334,7 +372,10 @@ function openSide(){
             </section>
           </article>
 </template>
+</div>
 <template id="blog">
+  <div id="tblog" name="template">
+
 
 
 
@@ -414,10 +455,17 @@ function openSide(){
     </section>
 
     <script src="json.js"></script>
+    </div>
 </template>
 
-<template id="datenschutz"></template>
-<template id="impressum"></template>
+<template id="datenschutz">
+    <div id="tdatenschutz" name="template">
+
+</template>
+<template id="impressum">
+    <div id="timpressum" name="template">
+
+</template>
 </main>
 <footer>
 
@@ -429,8 +477,8 @@ function openSide(){
 <div class="container-fluid">
     
       <ul class="navbar-nav mr-auto bg-dark">
-   <li class="nav-item pointer"><a id=navdatenschutz class="nav-link" href="#Datenschutzerklaerung" onclick="useTemp('#datenschutz',this.id)">Datenschutzerklärung</a></li>
-   <li class="nav-item pointer"><a id=navimpressum class=" nav-link" href="#Impressum" onclick="useTemp('#impressum',this.id)">Impressum</a></li>
+   <li class="nav-item pointer"><a id=navdatenschutz class="nav-link" href="#Datenschutzerklaerung" onclick="useTemp('datenschutz',this.id)">Datenschutzerklärung</a></li>
+   <li class="nav-item pointer"><a id=navimpressum class=" nav-link" href="#Impressum" onclick="useTemp('impressum',this.id)">Impressum</a></li>
  </ul>
 
 

@@ -9,10 +9,12 @@ function pushToSide(sec,ue,text){
 	var article=document.createElement("article")
 	var h2=document.createElement("h2")
 	var p=document.createElement("p")
+	var hr=document.createElement("hr")
 
 	h2.appendChild(document.createTextNode(ueContent))
 	p.appendChild(document.createTextNode(textContent))
 	article.appendChild(h2)
+	article.appendChild(hr)
 
 	article.appendChild(p)
 
