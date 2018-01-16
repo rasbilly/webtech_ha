@@ -1,22 +1,33 @@
-function getCharacterCount(text){
-	return (text==undefined || text==null||!new RegExp(".").test(text))?0: text.match(/./g).length;
+function InputTypeError(value){
+	 this.value=value;
+}
 
+InputTypeError.prototype.toString=function(){return "Value: "+this.value+" does not match"}
+
+function getCharacterCount(text){
+	if(text!=null && typeof text!="string" && text != undefined) return new InputTypeError(text);
+	var res= (text==undefined || text==null||!new RegExp(".").test(text))?0: text.match(/./g).length;
+	return res
 			
 	
 }
 
 function getWords( text ){
-	return (text==null||text==undefined)?[]:(/[^a-zA-Z0-9_€]/)[Symbol.split](text).filter(e=>e!="")
+	if(text!=null && typeof text!="string") return new InputTypeError(text);
+	var res=  (text==null||text==undefined)?[]:(/[^a-zA-Z0-9_€]/)[Symbol.split](text).filter(e=>e!="")
+	return res
 }
 
 
 function getLongestWords( text ){
+	if(text!=null && typeof text!="string" && text != undefined) return new InputTypeError(text);
 var length;
 return (text==null||text==undefined)?[]:getWords(text).sort((a,b)=>a.length>b.length).map(e=>{length=e.length;return e}).filter(e=>e.length>=length)
 }
 
 
 function getWordFrequency(text){
+	if(text!=null && typeof text!="string" && text != undefined) return new InputTypeError(text);
 	var lists=[]
 	var endlist=[]
 	if(text==null||text==undefined) return[]
@@ -53,6 +64,7 @@ function getWordFrequency(text){
 
 
 function filterTUBMails( text ){
+	if(text!=null && typeof text!="string" && text != undefined) return new InputTypeError(text);
 	if(text==null || text==undefined){
 		return []
 	}else{
@@ -75,6 +87,8 @@ function arrayToString(array){
 
 
 function getUnpublishingDate( text ){
+	if(text!=null && typeof text!="string" && text != undefined) return new InputTypeError(text);
+
 	var reg=/[0-9]+-(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|3[0-1])T(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\.[0-9]{3}Z/g;
 	var current=new Date();
 	var low=new Date(current.getTime());
@@ -117,7 +131,10 @@ var x="2018-01-01T15:45:00.000Z"
 //console.log((/[0-9]+-(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|3[0-1])T(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\\.[0-9]{3}Z)/g)[Symbol.match](x))
 //console.log((/[0-9]+-(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|3[0-1])T(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\.[0-9]{3}Z/g)[Symbol.match](x))
 
-console.log(getUnpublishingDate("2018-02-33T15:45:00.000Z"))
+function person(){
+	
+}
+console.log(getUnpublishingDate("hallo"))
 
 
 
