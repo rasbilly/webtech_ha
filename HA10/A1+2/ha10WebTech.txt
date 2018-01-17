@@ -1,0 +1,179 @@
+							
+
+						webTech ha10
+
+1.
+	1. - ID/Adresse in Computernetzen
+	   - Ermöglicht Adressierbarkeit von Geräten und zustellung von Paketen
+	
+	2. - Unterscheidung in Präfix für die Adresse des Netzes und Postfix 		 für Rechner innerhalb des Netzes
+	   - Länge des Präfix wird durch die Netzmaske angegeben 
+	   -Präfix: IP-Adresse AND Netzmaske in binär => Netzwerkadresse(netzwerkanteil)
+	   -Postfix: IP-Adresse AND (NOT Netzmaske) => Geräteteil z. B. 3
+
+	   https://www.edv-lehrgang.de/typo3temp/fl_realurl_image/netzwerkkennung-76.jpg
+
+	   -IPv4: 32-Bit-Adressen: 4294967296 unique
+	   -IPv6: 64-Bit-Adressen: 340282366920938463374607431768456 unique
+	   -Standardisierungsorganisation: Internet Engineering Task Force
+	   -Dokument: RFC:791(IPv4) und  RFC:6434(IPv6)
+	
+	3. IPv4: 
+	Die Internet Header Length (IHL) gibt die Länge des Headerbereiches an. Dabei wird die Länge mit 32 (=Bit) multipliziert. Die Minimallänge eines Header-IP-Paketes ist 160 Bit (=20 Byte) und maximal 480 Bit (=60 Byte). Somit kann die Headerlänger nur den Inhalt 5 bis 15 beinhalten.
+
+	IPv6: 
+	Im Vergleich zu IPv4, die einen variablen Header haben, besitzt IPv6 eine feste Länge von 40 Bytes. Allerdings besteht die Möglichkeit weitere Informationen in einem erweiterten Header unterzubringen.
+
+	
+	4. -Schicht Ip-Adresse: Vermittlungsschicht: Kommunikation zwischen Rechnern die an verschiedenen lokale Netzen angeschlossen sind,
+						     Wegewahl(Routing) und Adressierung, Paketvermittlung: Daten werden in mehreren Paketen übertragen, die über unterschiedliche Wege zum Empfänger gelangen
+				  
+	   - Netzgerät: Router
+
+
+	5. -Schicht:Transport
+	   -Aufgaben: zwei miteinander kommunizierenden Anwendungsprozessen eine transparente, lückenlose und gesicherte Ende-zu-Ende-Datenübertragung bereitzustellen
+	
+	6. -TCP: zuverlässiges, verbindungsorientiertes Protokoll zur 	
+		fehlerfreien Ende-zu-Ende-Übertragung eines Datenstroms
+	   - überträgt den Bytestrom fehlerfrei vom Sender zum Empfänger
+	   - besitzt geeignete Fehlererkennungs- und Korrekturmechanismen
+	   - stellt sicher, dass Client Daten korrekt erhalten hat und dass sie in der richtigen Reihenfolge angekommen sind,
+	   - Öffnet Kanal für beidseitige Kommunikation, stellt erst Verbindungher
+		
+    		Zuverlässigkeit
+
+    		TCP sorgt für eine exakte Kopie der Daten. 
+    		besitzt Maßnahmen wenn Datenpakete verschwunden sind.
+    		Auch Einflüße wie eine Veränderung der Reihenfolge, Verdoppelung oder Beschädigung der Segmente wird bemerkt und korrigiert. 
+    		->Wiederholung der Sendung (Retransmission) nötig. Der Sender muß daher bis zur Bestätigung des Empfangs alle Segmente im Speicher halten.
+    		
+			Sequenzierung:
+
+    		TCP zerlegt den Datenstrom der Applikation in einzelne Segmente. Diese werden mit einem TCP Header versehen, indem die TCP Steuer- und Kontroll-Daten Platz finden. Die Größe der Sequenzen (Pakete) wird durch die physikalischen Eigenschaften des Übertragungsmediums festgelegt (Maximum Transmission Units).
+    		
+			Flusskontrolle:
+
+    		TCP besitzt Mechanismen, die die Sendegeschwindigkeit an die Lastverhältnisse auf dem Netz sowie der Auslastung des Empfängers anpassen.
+    		
+			Datenstreaming:
+
+    		TCP ist für die Applikation transparent. Die Applikation schreibt einen konstanten Datenstrom auf die TCP Schnittstelle bzw. liest den Datenstrom von dort ein. Im Prinzip werden nur Schwankungen in der Geschwindigkeit registriert.
+
+        7. - UDP(User Datagram Protocol): unzuverlässiges, verbindungslosesProtokoll zur schnellen, aber unzuverlässigen Ende-zu-Ende-Kommunikation
+	   UDP sendet die Daten, ohne sich um den Verbleib zu kümmern und bietet lediglich eine Checksummen-Funktion, und deren Prüfung beim Empfänger. Es wird allerdings bei fehlerhaften Checksummen nichts unternommen - dies bleibt der Applikation überlassen.
+	
+
+	8. - um Adresskomponenten, die im Netzwerk genutzt werden, um 
+		Datenpakete einer Anwendung zuzuordnen. 
+	 	Teil der Netzwerk-Adresse, zur Zuordnung von TCP/UDP Verbindingun/Datenpaketen zwischen CLient und Server bewirkt
+	  - Bei TCP/UDP: Source Port und Destination Port
+
+	9. -NAT ist eine Technik, um eine begrenzte Anzahl von IP-Adressen mehrfach zu vergeben, indem verschiedene Netzwerke zusammengeschlossen werden. Seit der Erweiterung der IP-Adressen im Juni 2012 wird die Technik vor allem noch von Routern verwendet,
+	   - Gerät: Router
+	   - Netzwerkschichten:Netzwerkschickt
+
+	10. 
+	    - HTTP: 80/TCP
+	    - HTTPS: 443/TCP 
+	    - SMTP:  25/TCP
+	    - DNS: 53/UDP/TCP
+	    - Telnet: 23/TCP 
+	    - SSH: 22/TCP 
+            - IMAP: 143/TCP
+
+
+
+2.
+	1. - Ressourcenanzahl: 8
+	   - Dauer: 1,71s
+	   - DOMContentLoader: wenn das initiale HTML-Dokument vollstädnig geladen und geparsed ist, 1,26s
+	   - Load: wenn die Seite komplett geladen ist, 1,71s
+	   - Daten geladen: 79,4 KB
+	
+	2. 
+	   - max. 6
+	   - Browser wechseln, oder eine manuell Konfigurieren
+	
+	3. Reiter:
+		- Queueing: Warteschlange wegen Prios, Begrenzte Anzahl TCP-Verbindungen oder Browser wird Speicherplatz erst zugewiesen
+		- Stalled: Blockiert wegen o. g. Gründen	
+		- Waiting(TTFB => Time to First Byte): Browser wartet auf Antowort, inkludiert Reisedauer des Pakets und Zeit für Vorbereitung des Pakets auf Seiten des Servers
+		- Content Download: Brower empfängt Antwort
+		
+		- DNS Lookup: klärt die IP-Adresse der Anfrage
+		- SSL:
+		- Was dauert meistens am längestnen: Content download
+		
+
+	4. Aufbau HTPTP-Message-Header:
+		- Request line: HTTP/1.1 200 OK 
+		Response-Statuscode hier 200 OK: Die Anfrage war erfolgreich
+		- Headers
+		- Empty line
+		- HTTP body
+
+
+		start line entweder request-line oder status line (response) und bestimmen der länge des message bodies
+		theorie: request für client und response server
+
+		request-line   = method SP request-target SP HTTP-version CRLF
+
+		     status-line = HTTP-version SP status-code SP reason-phrase CRLF
+
+
+
+	5. - Einteilung HTTP-Statuscode:
+		- 1xx - Informationen
+		- 2xx - Erfolgreiche Operation
+		- 3xx - Umleitung
+		- 4xx - Client-Fehler
+		- 5xx - Server Fehler
+
+	   - HTTP Header-Felder:
+		- Accept: Welche Inhalttypen Client verarbeiten kann
+		- Accept-Encoding: Welche komprimieren Formate Client unterstützt
+		- Accept-Language: Welche Sprachen Client akzeptiert
+		- Cache-Control: Wird genutzt, um Optionen festzulegen, denen durch alle Caching-Mechanismen entlang der Anfrage-/Antwort-Kette Folge geleistet werden muss. 
+		- Connection: Welchen Typ von Verbindung der Cleint bevorzugt
+		- Content-Length: Länge des Body in Bytes
+		- Content-Type: MIME-Typ(Internet Media Type) des Body
+		- Last-Modified: zuletzt verändert
+ 		- Referer: enthält URI(Uniform Resource Identifier) der verweisenden Seite => Klicke ich auf meiner Willkommensseite, Blog an, so ist der Referer Willkommenseite. refer: Bezug nehmen
+		- User-Agent: User-Agent-String des Clients, enthält Infos über Client, sodass serverseitiges Script an verschiedene Browser angepasst Inhalte liefern kann
+		- Via: Gibt dem Server Informationen über Proxys im Übertragungsweg. 
+		- Fragen: Welche Header-Felder sind ein Muss: User-Agent, Via? 
+		
+
+	6. - Dauer: 110ms
+	   - DOMContentLoader: 177ms
+	   - Load: 194ms
+
+	   - 	Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+		Accept-Encoding:gzip, deflate, br
+		Accept-Language:de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7
+		Cache-Control:max-age=0
+		Connection:keep-alive
+		Cookie:c9.live.user.jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIwNTAxNTEiLCJuYW1lIjoidGdyb3NtYW4iLCJjb2RlIjoiOWNPaGx6UVZlTmtNRUJPWDFxMWwiLCJpYXQiOjE1MTU5NjcyMjYsImV4cCI6MTUxNjA1MzYyNn0.tPBG79LNRQhg1wEF69q3FuaZ5t_LpidFLDuH-rXp1G4; c9.live.user.sso=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIwNTAxNTEiLCJuYW1lIjoidGdyb3NtYW4iLCJpYXQiOjE1MTU5NjcyMjYsImV4cCI6MTUxNjA1MzYyNn0.2f1GkLEe5TehABH7rPWpFG7JB7B1EQ8dw5LHVReAbV4
+		If-Modified-Since:Sun, 14 Jan 2018 01:32:19 GMT
+		If-None-Match:"1e3d-562b277f18750-gzip"
+		Upgrade-Insecure-Requests:1
+		User-Agent:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+
+		- Responce verändert sich nicht, aber Request enthält mehr Informationen:
+			Accept, Accept-Encoding, Accept-Language, Cache-Control, Connection, Cookie, Host, If-Modified-Since, If-None-Match + 2 von davor:
+			Upgrade-Insecure-Request und User-Agent 
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
